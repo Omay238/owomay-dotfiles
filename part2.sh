@@ -1,3 +1,6 @@
+pacman-key --init
+pacman-key --populate archlinux
+
 echo "what is your region?"
 ls /usr/share/zoneinfo
 read -p "> " region

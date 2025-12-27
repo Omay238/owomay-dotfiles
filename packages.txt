@@ -31,12 +31,9 @@ qt6-multimedia-ffmpeg
 wl-clipboard
 cpio
 lazygit
-uv
-bun
 pciutils
 procps-ng
 nwg-look
-paru
 hyprland-meta-git
 hyprshutdown-git
 clipvault
