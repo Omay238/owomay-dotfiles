@@ -4,6 +4,7 @@ linux
 linux-firmware
 iwd
 zsh
+rustup
 neovim
 hyfetch
 macchina
