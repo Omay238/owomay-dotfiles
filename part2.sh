@@ -3,12 +3,20 @@ ls /usr/share/zoneinfo
 read -p "> " region
 
 if [ -f "/usr/share/zoneinfo/$region" ]; then
-  ln -s "/usr/share/zoneinfo/$region" /etc/localtime
+    ln -sf "/usr/share/zoneinfo/$region" /etc/localtime
+elif [ -d "/usr/share/zoneinfo/$region" ]; then
+    echo "what is your time zone?"
+    ls "/usr/share/zoneinfo/$region"
+    read -p "> " zone
+    if [ -n "$zone" ] && [ -f "/usr/share/zoneinfo/$region/$zone" ]; then
+        ln -sf "/usr/share/zoneinfo/$region/$zone" /etc/localtime
+    else
+        echo "invalid zone: $zone"
+        exit 1
+    fi
 else
-  echo "what is your time zone?"
-  ls "/usr/share/zoneinfo/$region"
-  read -p "> " zone
-  ln -s "/usr/share/zoneinfo/$region/$zone" /etc/localtime
+    echo "invalid region: $region"
+    exit 1
 fi
 
 hwclock --systohc
