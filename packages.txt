@@ -28,8 +28,11 @@ cpio
 lazygit
 uv
 bun
+pciutils
+procps-ng
 
 # aur
 paru
 hyprland-meta-git
+hyprshutdown-git
 clipvault
