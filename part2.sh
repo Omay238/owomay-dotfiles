@@ -36,17 +36,17 @@ usermod -G wheel "$username"
 mkdir "/home/$username"
 chown "$username" "/home/$username"
 
-su "$username"
-cd ~
-git clone https://aur.archlinux.org/paru.git
-cd paru
-makepkg -si
-cd ..
+runuser -u "$username" -- bash <<'EOF'
+  cd ~
+  git clone https://aur.archlinux.org/paru.git
+  cd paru
+  makepkg -si
+  cd ..
 
-git clone https://github.com/Omay238/owomay-dotfiles
-cd owomay-dotfiles
-./update.sh
-exit
+  git clone https://github.com/Omay238/owomay-dotfiles
+  cd owomay-dotfiles
+  ./update.sh
+EOF
 
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg

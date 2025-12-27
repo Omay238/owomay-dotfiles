@@ -13,6 +13,8 @@ find . -type f | while IFS= read -r path; do
   cp "$PWD/$rel" "$target"
 done
 
+cd ..
+
 echo "what keymap are you using? type 'us' for a standard qwerty keyboard"
 read -p "> " keymap
 echo "KEYMAP=$keymap" > /mnt/etc/vconsole.conf
