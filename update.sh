@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+paru -Syu $(cat packages.txt)
+
+. other.txt
+
 cd dotfiles
 
 find . -type f | while IFS= read -r path; do

@@ -1,7 +1,9 @@
-# official
-base-devel
-linux
-linux-firmware
+grub
+efibootmgr
+man-db
+man-pages
+texinfo
+systemd-sysvcompat
 iwd
 zsh
 rustup
@@ -32,8 +34,6 @@ bun
 pciutils
 procps-ng
 nwg-look
-
-# aur
 paru
 hyprland-meta-git
 hyprshutdown-git

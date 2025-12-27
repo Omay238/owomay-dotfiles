@@ -12,5 +12,4 @@ scratch.
 so, after getting the disk formatted and mounted as in the arch installation
 guide (everything in stage 1), you can run `install.sh`.  
 this sets up just about everything for you, and then you can unmount and
-reboot. keep in mind it's not fully automatic, so you will need to tell it
-some information to make sure it's all well and good. anyways, enjoy perhaps!
+reboot. it requires user input, but should make it easy.
