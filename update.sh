@@ -3,6 +3,10 @@ set -euo pipefail
 
 paru -Syu --noconfirm --skipreview $(cat packages.txt)
 
+hyprpm update
+hyprpm add https://github.com/hyprwm/hyprland-plugins
+hyprpm enable hyprscrolling
+
 . other.txt
 
 cd dotfiles
