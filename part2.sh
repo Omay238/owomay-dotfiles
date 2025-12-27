@@ -48,6 +48,9 @@ passwd "$username"
 
 runuser -u "$username" -- bash <<'EOF'
   cd ~
+
+  rustup default stable
+
   git clone https://aur.archlinux.org/paru.git
   cd paru
   makepkg -si

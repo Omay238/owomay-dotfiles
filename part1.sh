@@ -19,7 +19,7 @@ echo "what keymap are you using? type 'us' for a standard qwerty keyboard"
 read -p "> " keymap
 echo "KEYMAP=$keymap" > /mnt/etc/vconsole.conf
 
-pacstrap -K /mnt base-devel linux linux-firmware neovim git
+pacstrap -K /mnt base-devel linux linux-firmware neovim git rustup
 genfstab -U /mnt >> /mnt/etc/fstab
 
 cp part2.sh /mnt
