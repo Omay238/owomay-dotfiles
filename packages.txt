@@ -24,8 +24,10 @@ yazi
 mako
 wireplumber
 pipewire
+pipewire-jack
 qt5-wayland
 qt6-wayland
+qt6-multimedia-ffmpeg
 wl-clipboard
 cpio
 lazygit
