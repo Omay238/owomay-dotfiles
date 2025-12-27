@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-paru -Syu $(cat packages.txt)
+paru -Syu --noconfirm --skipreview $(cat packages.txt)
 
 . other.txt
 
