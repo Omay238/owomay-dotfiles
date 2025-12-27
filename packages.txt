@@ -31,6 +31,7 @@ uv
 bun
 pciutils
 procps-ng
+nwg-look
 
 # aur
 paru
