@@ -53,7 +53,7 @@ runuser -u "$username" -- bash <<'EOF'
 
   git clone https://aur.archlinux.org/paru.git
   cd paru
-  makepkg -si
+  makepkg -si --noconfirm
   cd ..
 
   git clone https://github.com/Omay238/owomay-dotfiles
