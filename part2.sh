@@ -43,6 +43,8 @@ useradd "$username"
 usermod -G wheel "$username"
 mkdir "/home/$username"
 chown "$username" "/home/$username"
+echo "and now the password"
+passwd "$username"
 
 runuser -u "$username" -- bash <<'EOF'
   cd ~
