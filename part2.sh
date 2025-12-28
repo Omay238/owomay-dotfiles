@@ -31,6 +31,7 @@ nvim /etc/locale.gen
 echo "type whichever your primary language zone is (e.g. en_US.UTF-8)"
 read -p "> " lang
 echo "LANG=$lang" > /etc/locale.conf
+locale-gen
 
 echo "now, for your hostname"
 read -p "> " hostname
