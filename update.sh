@@ -1,13 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-paru -Syu --noconfirm --skipreview $(cat packages.txt)
+paru -Syu --noconfirm --skipreview
 
 hyprpm update
-hyprpm add https://github.com/hyprwm/hyprland-plugins
 hyprpm enable hyprscrolling
-
-. other.txt
 
 cd dotfiles
 

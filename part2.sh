@@ -61,7 +61,7 @@ runuser -u "$username" -- bash <<'EOF'
 
   git clone https://github.com/Omay238/owomay-dotfiles
   cd owomay-dotfiles
-  ./update.sh
+  ./setup.sh
 EOF
 
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
