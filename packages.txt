@@ -34,6 +34,7 @@ lazygit
 pciutils
 iputils
 procps-ng
+vlc
 nwg-look
 hyprland-meta-git
 hyprshutdown-git
